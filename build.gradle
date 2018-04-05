@@ -1,0 +1,21 @@
+version 'unspecified'
+
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.15'
+
+    compile 'com.datastax.cassandra:cassandra-driver-core:3.4.0'
+    compile 'com.datastax.cassandra:cassandra-driver-mapping:3.4.0'
+    compile 'com.datastax.cassandra:cassandra-driver-extras:3.4.0'
+}
+
+run {
+    main = 'net.grydeske.CassandraExample'
+    standardInput = System.in
+}
